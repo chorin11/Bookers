@@ -2,3 +2,12 @@
 
 <%= link_to "Editing Book", edit_book_path(@book) %>
 <%= link_to "Destroy", book_path(@book), method: :delete %>
+
+<p>
+	<strong>Title:</strong>
+	<%= @book.title %>
+</p>
+<p>
+	<strong>Body:</strong>
+    <%= @book.body %>
+</p>
