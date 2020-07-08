@@ -6,6 +6,7 @@
     <% end %>
   </ul>
 <% end %>
+<%= h(flash[:error]) %>
 <%= form_for(@book) do |f| %>
 
 	<h4>Title</h4>
@@ -14,6 +15,8 @@
 	<h4>Body</h4>
 	<%= f.text_area :body %>
 
-	<div><%= f.submit 'Create Book' %></div>
+	<div><%= f.submit 'Update Book' %></div>
 
 <% end %>
+<%=link_to "Show" ,book_path(@book.id) %>
+<%=link_to "Back" ,books_path %>
